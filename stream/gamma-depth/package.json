@@ -1,0 +1,20 @@
+{
+  "name": "dev-center-gamma-depth-node-stream",
+  "version": "1.0.0",
+  "description": "Dev Center Gamma Depth Stream Application",
+  "license": "MIT",
+  "author": "Corva",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "zip -r $npm_package_name-$npm_package_version.zip package.json package-lock.json manifest.json index.js lib",
+    "corva": "corva local",
+    "test": "npm audit --production && npm run unit",
+    "unit": "jest"
+  },
+  "dependencies": {
+    "@corva/node-sdk": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "format": 1,
+  "license": {
+    "type": "UNLICENSED"
+  },
+  "developer": {
+    "name": "Big Data Energy",
+    "identifier": "big-data-energy"
+  },
+  "application": {
+    "key": "big-data-energy.gamma_depth.scheduler",
+    "name": "Gamma Depth Calculator Scheduled",
+    "category": "analytics",
+    "segments": ["drilling"],
+    "type": "scheduler",
+    "visibility": "private"
+  },
+  "settings": {
+    "runtime": "nodejs12.x",
+    "entrypoint": {
+      "file": "index.js",
+      "function": "handler"
+    },
+    "timeout": 120,
+    "memory_size": 128,
+    "app": {
+      "cron_string": "*/5 * * * *"
+    },
+    "environment": {}
+  },
+  "datasets": {
+    "big-data-energy.actual-gamma-depth": {
+      "permissions": [
+        "read",
+        "write"
+      ]
+    },
+    "corva.wits": {
+      "permissions": [
+        "read"
+      ]
+    },
+    "corva.data.drillstring": {
+      "permissions": [
+        "read"
+      ]
+    }
+  }
+}

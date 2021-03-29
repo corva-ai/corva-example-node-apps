@@ -1,0 +1,43 @@
+{
+  "format": 1,
+  "license": {
+    "type": "UNLICENSED"
+  },
+  "developer": {
+    "name": "Big Data Energy",
+    "identifier": "big-data-energy"
+  },
+  "application": {
+    "key": "big-data-energy.formation-evaluation-importer.task",
+    "name": "Formation Evaluation Importer",
+    "category": "analytics",
+    "segments": ["drilling"],
+    "type": "task",
+    "visibility": "private"
+  },
+  "settings": {
+    "runtime": "nodejs12.x",
+    "entrypoint": {
+      "file": "index.js",
+      "function": "handler"
+    },
+    "timeout": 120,
+    "memory_size": 128,
+    "app": {},
+    "environment": {}
+  },
+  "datasets": {
+    "big-data-energy.formation-evaluation.data": {
+      "permissions": [
+        "read",
+        "write"
+      ]
+    },
+    "big-data-energy.formation-evaluation.metadata": {
+      "permissions": [
+        "read",
+        "write"
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+output
+node_modules
+.DS_Store
+.idea
+
+test-sources
+.corvarc.js
+*.zip

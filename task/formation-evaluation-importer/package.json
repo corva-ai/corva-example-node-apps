@@ -1,0 +1,27 @@
+{
+  "name": "dev-center-formation-evaluation-importer",
+  "version": "1.0.0",
+  "description": "Dev Center Formation Evaluation Data Importer Application",
+  "license": "MIT",
+  "author": "Corva LLC",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "patch-package",
+    "bundle": "zip -r $npm_package_name-$npm_package_version.zip package.json package-lock.json manifest.json index.js lib patches",
+    "start": "node bin/run.js",
+    "test": "npm audit --production && npm run unit",
+    "unit": "jest"
+  },
+  "dependencies": {
+    "@corva/node-sdk": "^1.4.0",
+    "corva-convert-units": "^1.10.21",
+    "las-js": "^3.2.4",
+    "patch-package": "^6.2.2"
+  },
+  "devDependencies": {
+    "aws-lambda-test-utils": "^1.3.0",
+    "jest": "^26.6.3",
+    "jest-junit": "^12.0.0",
+    "serverless": "^1.68.0"
+  }
+}
