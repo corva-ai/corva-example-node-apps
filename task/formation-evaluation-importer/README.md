@@ -20,7 +20,6 @@ Type: Task
 ## Prerequisites
 
 - OS X or Linux-based system is preferred (not required)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop) installed
 - [Node.js with NPM](https://nodejs.org/en/) installed (via [nvm](https://github.com/nvm-sh/nvm))
 
 ## How to use
